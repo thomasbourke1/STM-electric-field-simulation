@@ -24,7 +24,7 @@ During my Master's research project, we wished to model electric field pulses th
 
 ### Screenshots
 
-- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5$\r{A}$) is set between the tip and sample. \\[ augh \\]
+- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5 ![Equation][https://latex.codecogs.com/svg.image?\r{A}]) is set between the tip and sample.
 ![STM geometry](/readme_scs/setup.jpg)
 - Heat map of voltage applied.
 ![Tip-surface bias applied](/readme_scs/SCR-20241121-ohlm.jpeg)
