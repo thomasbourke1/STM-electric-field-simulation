@@ -1,4 +1,4 @@
-# Scanning tunnelling microscropy pulsing
+# Electric field pulse modelling
 
 > "electricity is really just organized lightning" - George Carlin
 
@@ -24,15 +24,15 @@ During my Master's research project, we wished to model electric field pulses th
 
 ### Screenshots
 
-- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5 ![Equation][https://latex.codecogs.com/svg.image?\r{A}]) is set between the tip and sample.
+- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<0.5nm) is set between the tip and sample.
 ![STM geometry](/readme_scs/setup.jpg)
-- Heat map of voltage applied.
+- Heat map of applied voltage.
 ![Tip-surface bias applied](/readme_scs/SCR-20241121-ohlm.jpeg)
-- Out of plane electric field component as function of distance across the monolayer ReS$_2$ sample
+- Out of plane electric field component as function of distance across the monolayer ReS2 sample.
 ![Electric field plotted](/readme_scs/E_z.jpeg)
 
 ## Contact
-Your Name - [tb944@bath.ac.uk](mailto:tb944@bath.ac.uk)
+Thomas Bourke - [tb944@bath.ac.uk](mailto:tb944@bath.ac.uk)
 
 ## References
 
