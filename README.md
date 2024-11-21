@@ -1,4 +1,4 @@
-# STM pulse modelling
+# Scanning tunnelling microscropy pulsing
 
 > "electricity is really just organized lightning" - George Carlin
 
@@ -19,12 +19,12 @@ During my Master's research project, we wished to model electric field pulses th
 - [COMSOL Multiphysics](https://www.comsol.com/)
 
 ## Features
-- Plot in and out of plane electric field component as a function of distance across the substrate
+- Plot in and out of plane electric field component as a function of distance across the substrate.
 - Calculate tip-sample distance with feedback on using the STM equation.
 
 ### Screenshots
 
-- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5$\r{A}$) is set between the tip and sample.
+- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5$\r{A}$) is set between the tip and sample. \\[ augh \\]
 ![STM geometry](/readme_scs/setup.jpg)
 - Heat map of voltage applied.
 ![Tip-surface bias applied](/readme_scs/SCR-20241121-ohlm.jpeg)
