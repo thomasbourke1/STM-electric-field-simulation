@@ -12,7 +12,7 @@
 
 ## About the Project
 
-During my Master's research project, we wished to model electric field pulses that could be applied to a semiconducting 2D material via a conducting STM tip . Previous work [1][2] has shown that pulsing of this kind can change the magnetic domain structure of the material, leading the way for possible all-electrical manipulation of magnetic domains. This code plots data generated using COMSOL Multiphysics to show how the electric field intensity varies across the surface of the material
+During my Master's research project, we wished to model electric field pulses that could be applied to a semiconducting 2D material via a conducting STM tip . Previous work [1] [2] has shown that pulsing of this kind can change the magnetic domain structure of the material, leading the way for possible all-electrical manipulation of magnetic domains. This code plots data generated from COMSOL Multiphysics to show how the electric field intensity varies across the surface of the material.
 
 ### Built With
 - [COMSOL Multiphysics](https://www.comsol.com/)
@@ -24,7 +24,9 @@ During my Master's research project, we wished to model electric field pulses th
 
 ### Screenshots
 Include screenshots to demonstrate functionality:
-![STM geometry](path/to/screenshot.png)
+![STM geometry](/readme_scs/setup.jpg)
+![Tip-surface bias applied](/readme_scs/SCR-20241121-ohlm.jpeg)
+![Electric field plotted](/readme_scs/E_z.jpeg)
 
 ## Contact
 Your Name - [tb944@bath.ac.uk](mailto:tb944@bath.ac.uk)
