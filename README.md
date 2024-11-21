@@ -15,17 +15,20 @@
 During my Master's research project, we wished to model electric field pulses that could be applied to a semiconducting 2D material via a conducting STM tip . Previous work [1] [2] has shown that pulsing of this kind can change the magnetic domain structure of the material, leading the way for possible all-electrical manipulation of magnetic domains. This code plots data generated from COMSOL Multiphysics to show how the electric field intensity varies across the surface of the material.
 
 ### Built With
+- [Python](https://www.python.org/)
 - [COMSOL Multiphysics](https://www.comsol.com/)
 
 ## Features
-- Feature 1: Brief description.
-- Feature 2: Brief description.
-- Feature 3: Brief description.
+- Plot in and out of plane electric field component as a function of distance across the substrate
+- Calculate tip-sample distance with feedback on using the STM equation.
 
 ### Screenshots
-Include screenshots to demonstrate functionality:
+
+- Schematic of the model used in this simulation. The Au substrate was set as grounded and a bias of 7V applied uniformly throughout the tip. A small distance (<5$\r{A}$) is set between the tip and sample.
 ![STM geometry](/readme_scs/setup.jpg)
+- Heat map of voltage applied.
 ![Tip-surface bias applied](/readme_scs/SCR-20241121-ohlm.jpeg)
+- Out of plane electric field component as function of distance across the monolayer ReS$_2$ sample
 ![Electric field plotted](/readme_scs/E_z.jpeg)
 
 ## Contact
