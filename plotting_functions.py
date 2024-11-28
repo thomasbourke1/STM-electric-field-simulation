@@ -92,8 +92,76 @@ def plot_Ez(z_files, feedback, free_param):
         # plt.xlim()
         
         
-        plt.xlabel('Distance nm') # axis labels
+        plt.xlabel('Distance $d$ nm') # axis labels
         plt.ylabel('$E_z$ V/nm')
         # plt.xlim(20, 30)
         plt.legend(fontsize=14)
         plt.grid(True)
+    
+    
+def plot_peakE(feedbackOn_fileList, feedbackOff_fileList, component='x'):
+    """Plot peak field E against voltage, can specify x or z component
+
+    Args:
+        feedbackOn_fileList (str): list of files for feedback on
+        feedbackOff_fileList (str): list of files for feedback off
+        
+    Returns:
+        x_files, z_files (array): Array of file names
+    """
+    plt.figure(figsize=(6, 5)) # figure params
+    plt.rcParams.update({
+        'axes.labelsize': 14,    # Axis labels font size
+        'xtick.labelsize': 12,   # X-tick labels font size
+        'ytick.labelsize': 12,   # Y-tick labels font size
+        'axes.titlesize': 16     # Title font size
+    })
+    
+    voltage_array = [] # plot feedback On
+    peakE_array = []
+    for file in feedbackOn_fileList:
+        df = pd.read_csv(file, delimiter='\t')
+        # voltage = file.split('/')[1].split('V')[0]
+        df[['Distance', 'E_field']] = df['% Model:              STM_tip.mph'].str.split(' ', 1, expand=True)
+        df = df[7:]
+
+        df['Distance'] = pd.to_numeric(df['Distance'])
+        df['E_field'] = abs(pd.to_numeric(df['E_field']))
+        
+        
+        peakE = np.max(df['E_field'])
+        peakE_array.append(peakE)
+        
+        voltage = re.search(r'(\d+)V', file).group(1)
+        voltage_array.append(voltage)
+    plt.plot(voltage_array, peakE_array, marker='', linestyle='-', label='feedback on') 
+    
+    
+    voltage_array = [] # plot feedback Off
+    peakE_array = []
+    for file in feedbackOff_fileList:
+        df = pd.read_csv(file, delimiter='\t')
+        # voltage = file.split('/')[1].split('V')[0]
+        df[['Distance', 'E_field']] = df['% Model:              STM_tip.mph'].str.split(' ', 1, expand=True)
+        df = df[7:]
+
+        df['Distance'] = pd.to_numeric(df['Distance'])
+        df['E_field'] = abs(pd.to_numeric(df['E_field']))
+        
+        
+        peakE = np.max(df['E_field'])
+        peakE_array.append(peakE)
+        
+        voltage = re.search(r'(\d+)V', file).group(1)
+        voltage_array.append(voltage)
+    plt.plot(voltage_array, peakE_array, marker='', linestyle='-', label='feedback off')
+    
+    
+    plt.xlabel('Voltage / V') # axis labels
+    if component=='z':
+        plt.ylabel('Peak $|E_z|$ V/nm')
+    if component=='x':
+        plt.ylabel('Peak $|E_x|$ V/nm')
+        
+    plt.legend(fontsize=14)
+    plt.grid(True)
